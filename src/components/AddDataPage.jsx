@@ -20,7 +20,7 @@ function AddDataPage() {
     setMessage('')
 
     try {
-      const response = await axios.post('https://finanace-one.vercel.app/api/data', { content })
+      const response = await axios.post('http://localhost:5000/api/data', { content })
       
       setMessage('✅ Data saved successfully!')
       setContent('')

@@ -18,7 +18,7 @@ function FetchDataPage() {
       setLoading(true)
       setError('')
       
-      const response = await axios.get('https://finanace-one.vercel.app/api/data')
+      const response = await axios.get('http://localhost:5000/api/data')
       
       // Handle different response structures
       let fetchedData = []
@@ -132,7 +132,7 @@ function FetchDataPage() {
             {/* Debug button to check API response */}
             <button
               onClick={() => {
-                axios.get('https://finanace-one.vercel.app/api/data')
+                axios.get('http://localhost:5000/api/data')
                   .then(res => {
                     console.log('API Response:', res.data)
                     alert(`API Response Structure:\n\n${JSON.stringify(res.data, null, 2)}`)
@@ -166,7 +166,7 @@ function FetchDataPage() {
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
               </svg>
               <p className="text-gray-600">Loading data from database...</p>
-              <p className="text-gray-400 text-sm mt-2">Connected to: https://finanace-one.vercel.app/api/data</p>
+              <p className="text-gray-400 text-sm mt-2">Connected to: http://localhost:5000/api/data</p>
             </div>
           </div>
         )}
